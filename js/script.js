@@ -37,3 +37,29 @@ const teamMembers = [
   }
 ];
 
+const teamContainer = document.getElementById('our-team-members');
+
+function createMemberCard (name, role, email, img){
+  
+  const cardForAnyMember = document.createElement("div");
+  cardForAnyMember.classList.add("col-md-4");
+
+  cardForAnyMember.innerHTML= `<div class="card mb-3 bg-black text-white  m-3" id="member-card" style="max-width: 540px;">
+          <div class="row">
+            <div class="col-md-4">
+              <img src="./img/male1.png" class="img-fluid rounded-start" id="member-photo" alt="">
+            </div>
+            <div class="col-md-8">
+              <div class="card-body">
+                <h5 class="card-title" id="full-name-member">${name}</h5>
+                <p class="card-text" id="role-member">${role}</p>
+                <a href="#" class="card-text" id="email-member"> ${email}</a>
+              </div>
+            </div>
+          </div>`;
+
+          teamContainer.appendChild(cardForAnyMember)
+}
+
+
+
